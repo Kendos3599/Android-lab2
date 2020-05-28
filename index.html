@@ -1,0 +1,11 @@
+<html lang="en"><head><meta charset="UTF-8"><title>Лаб2</title>
+</head><body><div class="container">
+<input type="text" id="EntryField" placeholder="Enter array with: ," class="style">
+<button class="style" id="btn" style="width: 100px;">Вивести максимальний елемент масива</button>
+<p>Your array :<span id="massiv"></span></p>
+ <p>Max element: <span id="maxElem"></span></p></div><script>
+const btn = document.getElementById("btn");const entryField = document.getElementById("EntryField");
+const arr = document.getElementById("massiv");
+const maxEl = document.getElementById("maxElem");btn.addEventListener("click",function () {
+ let newArr = entryField.value.split(",");arr.textContent = newArr.join(",");
+newArr.sort(function(a,b){return a-b});maxEl.textContent = newArr.pop()})</script></body></html>
